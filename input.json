@@ -1,0 +1,11 @@
+{
+  "eventType":"MATERIALSET", #// Tipo de evento
+  "eventID":"23jh2j3",  #// este ID es para poder identificar el evento, se generara de forma que siempre sea único
+  "eventTS":"15673727828", #// timestamp del evento
+  "elementID":2, #//ID del pendiente que se ha seleccionado
+  "properties": [
+    {
+      "name": "Enganche", #// Nombre de la propiedad que se ha seleccionado
+      "value": "color_6" #// Valor de la propiedad que se ha seleccionado
+    }]
+}

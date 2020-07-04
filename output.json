@@ -1,0 +1,17 @@
+{
+	"eventType": "ELEMENTSET",
+	"eventID": "23jh2j3",
+	"eventTS": "15673727828",
+	"elementID": 5,
+	"properties": [
+		{
+			"name": "Enganche", 
+			"value": "color_4"
+		},
+		{
+			"name": "Pendiente", 
+			"value": "color_6"
+		}
+	]
+}
+
