@@ -43,7 +43,7 @@ import time
 from bs4 import BeautifulSoup
 
 # DEEP LEARNING
-from __future__ import absolute_import, division, print_function, unicode_literals
+#from __future__ import absolute_import, division, print_function, unicode_literals
 import pathlib
 import tensorflow as tf
 from tensorflow import keras
@@ -81,9 +81,11 @@ from sklearn.exceptions import DataConversionWarning
 warnings.filterwarnings(action='ignore', category=DataConversionWarning)
 
 # PATHS
-path_save = sys.arg[0]
-path_read = sys.arg[1]
+path_save = sys.argv[1]
+path_read = sys.argv[2]
 
+#print(path_save + '\n')
+#print(path_read + '\n')
 
 def process_data_1():
     # CARGAR DATOS EXCEL (FALTA AGREGAR CSV)
