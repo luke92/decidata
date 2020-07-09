@@ -291,7 +291,7 @@ with open (path_read+'modelo_pedidos', 'wb') as f:
 # LOAD MODEL
 new_data = pd.read_csv(path_read+'master.csv')
 
-with open (path+'modelo_pedidos', 'rb') as f:
+with open (path_read+'modelo_pedidos', 'rb') as f:
     rfr = pickle.load(f)
 
 rfr
@@ -312,8 +312,8 @@ print(rfr.predict(X_train).round(1))
 # RESULTADO
 resultado = rfr.predict(X_train).round(1)
 # CREAR CSV
-resultado.to_csv(path_save+'predicciones.csv')
-
+#resultado.to_csv(path_save+'predicciones.csv')
+prediction = pd.DataFrame(resultado, columns=['predicciones']).to_csv(path_save+'predicciones.csv')
 
 
 # GRAFICOS
