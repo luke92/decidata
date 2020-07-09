@@ -34,7 +34,7 @@ sudo python -m pip install sklearn
 
 sudo python -m pip install openpyxl
 
-Instalar librerias para script de restaurante
+# Instalar librerias para script de restaurante
 
 sudo python -m pip install xlrd
 
@@ -47,6 +47,7 @@ sudo python -m pip install pandas-profiling
 sudo python -m !pip install -U pandas-profiling
 
 sudo python -m pip install bs4
+
 sudo yum install python3-devel
 
 sudo python -m pip install tensorflow
