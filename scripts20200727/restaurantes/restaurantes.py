@@ -294,7 +294,7 @@ transform = ax.transAxes
 line.set_transform(transform)
 ax.add_line(line)
 plt.title('RFR')
-plt.savefig(path_output+'Grafico_1')
+plt.savefig(path_output+'/Grafico_1')
 
 
 # SAVE MODEL
@@ -335,8 +335,8 @@ print(rfr.predict(X_train).round(1))
 # RESULTADO
 resultado = rfr.predict(X_train).round(1)
 # CREAR CSV
-#resultado.to_csv(path_output+'predicciones.csv')
-prediction = pd.DataFrame(resultado, columns=['predicciones']).to_csv(path_output+'predicciones.csv')
+#resultado.to_csv(path_output+'/predicciones.csv')
+prediction = pd.DataFrame(resultado, columns=['predicciones']).to_csv(path_output+'/predicciones.csv')
 
 
 # GRAFICOS
@@ -373,7 +373,7 @@ sns.set(style="whitegrid")
 plt.figure(figsize=(10, 8))
 ax = sns.boxplot(x='today_orders', data=dataset, orient="v")
 plt.title('Visualización de outliers')
-plt.savefig(path_output+'Grafico_2')
+plt.savefig(path_output+'/Grafico_2')
 # SIN OUTLIERS
 # ELIMINAR OUTLIERS
 dataset_so = dataset[dataset['today_orders'] < 27]
@@ -381,7 +381,7 @@ sns.set(style="whitegrid")
 plt.figure(figsize=(10, 8))
 ax = sns.boxplot(x='today_orders', data=dataset_so, orient="v")
 plt.title('Visualización de outliers')
-plt.savefig(path_output+'Grafico_3')
+plt.savefig(path_output+'/Grafico_3')
 
 # CORRELACION
 matrix_corr = dataset_so.corr()
@@ -389,7 +389,7 @@ matrix_corr = dataset_so.corr()
 sns.heatmap(matrix_corr, annot=True)
 plt.yticks(rotation=360)
 plt.title('Correlación de variables')
-plt.savefig(path_output+'Grafico_4')
+plt.savefig(path_output+'/Grafico_4')
 
 
 # A N O V A
@@ -410,7 +410,7 @@ df_anova1.to_csv(path_input+'/df_anova1.csv')
 # BOXPLOT POR DIAS DE SEMANA
 df_anova.boxplot('today_orders', by='day_week', figsize=(12, 8))
 mod = ols('today_orders ~ day_week', data=df_anova).fit()
-plt.savefig(path_output+'Grafico_5')
+plt.savefig(path_output+'/Grafico_5')
 aov_table = sm.stats.anova_lm(mod) # , typ=2)
 # print(aov_table)
 
@@ -443,7 +443,7 @@ sns.catplot(x='day_week', y='orders', data=dataset_year_3, kind="bar", aspect=3)
 plt.title('Distribución de pedidos por día de la semana 2017 - 2018')
 plt.xlabel('day_week')
 plt.ylabel('orders')
-plt.savefig(path_output+'Grafico_6')
+plt.savefig(path_output+'/Grafico_6')
 
 
 # COMPARACION PEDIDOS POR DIA DE SEMANA 2017-2018
@@ -458,7 +458,7 @@ fig, ax = plt.subplots(figsize=(4,4))
 sns.catplot(x="day_week", y="today_orders", hue="year", kind="bar", data=dataset_year, ax=ax, ci=None)
 ax.legend(['2017', '2018'], facecolor='w')
 plt.title('Comparación de pedidos por día de semana 2017 - 2018')
-plt.savefig(path_output+'Grafico_7')
+plt.savefig(path_output+'/Grafico_7')
 
 # HEATMAP
 # PROMEDIO DE PEDIDOS POR DIAS Y MESES
@@ -470,7 +470,7 @@ a.vlines([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], *a.get_xlim())
 plt.title('Promedio de pedidos por días y meses 2018')
 plt.xlabel('month')
 plt.ylabel('day_week')
-plt.savefig(path_output+'Grafico_8')
+plt.savefig(path_output+'/Grafico_8')
 
 
 # # PROMEDIO DE PEDIDOS POR DIAS Y SEMANAS
@@ -533,7 +533,7 @@ ax.legend(['2017', '2018'], facecolor='w')
 plt.title('Pedidos por mes 2017 - 2018')
 plt.xlabel('date')
 plt.ylabel('orders')
-plt.savefig(path_output+'Grafico_9')
+plt.savefig(path_output+'/Grafico_9')
 
 
 print('')

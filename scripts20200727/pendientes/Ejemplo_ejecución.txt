@@ -1,4 +1,8 @@
-py pendientes.py --ipath="./input" --opath="./output" --data="{\"eventType\":\"MATERIALSET\",\"eventID\":\"23jh2j3\",\"eventTS\":\"15673727828\",\"elementID\":2,\"properties\":[{\"name\":\"Enganche\",\"value\":\"color_6\"}]}"
+#Opcion 1
+python -W ignore pendientes.py --ipath="./input" --opath="./output" --data="{\"eventType\":\"MATERIALSET\",\"eventID\":\"23jh2j3\",\"eventTS\":\"15673727828\",\"elementID\":2,\"properties\":[{\"name\":\"Enganche\",\"value\":\"color_6\"}]}"
+
+#Opcion 2
+python -W ignore pendientes.py --ipath="./input" --opath="./output" --data="{\"eventType\":\"ELEMENTSET\",\"eventID\":\"23jh2j3\",\"eventTS\":\"15673727828\",\"elementID\":5}"
 
 
 ###########################################

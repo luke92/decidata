@@ -5,6 +5,8 @@ Editor de Spyder
 Este es un archivo temporal
 """
 
+import sys
+import json
 import pandas as pd
 import os, getopt
 from plotnine import *
@@ -20,7 +22,7 @@ data_json = None
 try:
     opts, args = getopt.getopt(sys.argv[1:],"i:o:d:",["ipath=","opath=","data="])
 except getopt.GetoptError:
-    print 'pendientes.py -ipath <path_input> -opath <path_output> -data data'
+    print ('pendientes.py -ipath <path_input> -opath <path_output> -data data')
     sys.exit(2)
 for opt, arg in opts:
     if opt in ("-i", "--ipath"):
@@ -28,21 +30,21 @@ for opt, arg in opts:
     elif opt in ("-o", "--opath"):
         path_output = arg
     elif opt in ("-d", "--data"):
-        data_json = arg
+        data_json = json.loads(arg)
 
 if path_output is None:
-    print "-o arg is required"
+    print ('-o arg is required')
     sys.exit(2)
 
 if path_input is None:
-    print "-i arg is required"
+    print ('-i arg is required')
     sys.exit(2)
 
 if data_json is None:
-    print "-d arg is required"
+    print ('-d arg is required')
     sys.exit(2)
 
-datos = pd.read_csv(path_input + "/datos.csv',sep=";")
+datos = pd.read_csv(path_input + '/datos.csv',sep=";")
 datos.head()
 
 datos.shape

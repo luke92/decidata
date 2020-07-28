@@ -1,0 +1,74 @@
+[ec2-user@ip-172-31-47-220 pendientes]$ python -W ignore pendientes.py --ipath="./input" --opath="./output" --data="{\"eventType\":\"MATERIALSET\",\"eventID\":\"23jh2j3\",\"eventTS\":\"15673727828\",\"elementID\":2,\"properties\":[{\"name\":\"Enganche\",\"value\":\"color_6\"}]}"
+Check de que pendientes y enganches no se han mezclado:
+Enganche            Enganche Beatle  Enganche Letra  Enganche Palabra  \
+Pendiente
+No info                           0               0                 0
+Pendiente Beatle                170               0                 0
+Pendiente Letra                   0             130                 0
+Pendiente Palabra                 0               0               154
+Pendiente Quadrato                0               0                 0
+Pendiente Sfera                   0               0                 0
+
+Enganche            Enganche Quadrato  Enganche Sfera  No info
+Pendiente
+No info                             0               0        5
+Pendiente Beatle                    0               0        0
+Pendiente Letra                     0               0        0
+Pendiente Palabra                   0               0        0
+Pendiente Quadrato                139               0        0
+Pendiente Sfera                     0             206        0
+Analizando pendiente:  Pendiente Quadrato
+Unicos pendientes
+ Pendiente Quadrato    139
+Name: Pendiente, dtype: int64
+Unicos enganches
+ Enganche Quadrato    139
+Name: Enganche, dtype: int64
+FINALIZADO
+-------------------------
+Analizando pendiente:  Pendiente Palabra
+Unicos pendientes
+ Pendiente Palabra    154
+Name: Pendiente, dtype: int64
+Unicos enganches
+ Enganche Palabra    154
+Name: Enganche, dtype: int64
+FINALIZADO
+-------------------------
+Analizando pendiente:  Pendiente Beatle
+Unicos pendientes
+ Pendiente Beatle    170
+Name: Pendiente, dtype: int64
+Unicos enganches
+ Enganche Beatle    170
+Name: Enganche, dtype: int64
+FINALIZADO
+-------------------------
+Analizando pendiente:  Pendiente Letra
+Unicos pendientes
+ Pendiente Letra    130
+Name: Pendiente, dtype: int64
+Unicos enganches
+ Enganche Letra    130
+Name: Enganche, dtype: int64
+FINALIZADO
+-------------------------
+Analizando pendiente:  Pendiente Sfera
+Unicos pendientes
+ Pendiente Sfera    206
+Name: Pendiente, dtype: int64
+Unicos enganches
+ Enganche Sfera    206
+Name: Enganche, dtype: int64
+FINALIZADO
+-------------------------
+Analizando pendiente:  No info
+Unicos pendientes
+ No info    5
+Name: Pendiente, dtype: int64
+Unicos enganches
+ No info    5
+Name: Enganche, dtype: int64
+FINALIZADO
+-------------------------
+[ec2-user@ip-172-31-47-220 pendientes]$
