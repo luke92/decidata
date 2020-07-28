@@ -34,7 +34,7 @@ import joblib
 import tempfile
 import calendar
 import pandas_profiling
-from pandas_profiling import PropathReport
+from pandas_profiling import ProfileReport
 
 # WEB SCRAPPING (FALTA EL SCRIPT)
 import requests
@@ -88,7 +88,7 @@ file_input = None
 try:
     opts, args = getopt.getopt(sys.argv[1:],"i:o:f:",["ipath=","opath=","file="])
 except getopt.GetoptError:
-    print 'restaurantes.py -ipath <path_input> -opath <path_output> -f <file_input> '
+    print('restaurantes.py -ipath <path_input> -opath <path_output> -f <file_input> ')
     sys.exit(2)
 for opt, arg in opts:
     if opt in ("-i", "--ipath"):
@@ -99,15 +99,15 @@ for opt, arg in opts:
         file_input = arg
 
 if path_output is None:
-    print "-o arg is required"
+    print('-o arg is required')
     sys.exit(2)
 
 if path_input is None:
-    print "-i arg is required"
+    print ('-i arg is required')
     sys.exit(2)
 
 if file_input is None:
-    print "-f arg is required"
+    print ('-f arg is required')
     sys.exit(2)
 
 def process_data_1():
