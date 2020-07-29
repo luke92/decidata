@@ -9,6 +9,8 @@ import sys
 import json
 import pandas as pd
 import os, getopt
+import tempfile
+os.environ['MPLCONFIGDIR'] = tempfile.mkdtemp()
 from plotnine import *
 pd.options.display.max_columns=100
 

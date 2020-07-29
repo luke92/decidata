@@ -2,6 +2,9 @@
 # CARGAR LIBRERIAS
 import sys
 import os, getopt
+import tempfile
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['MPLCONFIGDIR'] = tempfile.mkdtemp()
 import os.path
 import pandas as pd
 import glob
@@ -46,6 +49,7 @@ from bs4 import BeautifulSoup
 #from __future__ import absolute_import, division, print_function, unicode_literals
 import pathlib
 import tensorflow as tf
+
 from tensorflow import keras
 from tensorflow.keras import layers
 from functools import partial
